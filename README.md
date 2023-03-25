@@ -1,4 +1,4 @@
-# Simple-CV-CartoonStyler
+# Simple-CV-Cartoonizer
 OpenCV를 활용한 간단한 카툰 필터 적용하기.
 
 [사용법]

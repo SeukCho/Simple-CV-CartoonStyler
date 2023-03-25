@@ -1,4 +1,4 @@
-# Simple CV CartoonStyler
+# Simple CV Cartoonizer
 # 주석은 ChatGPT Example (chatgptexample.py) 비교 위주
 
 import cv2 as cv

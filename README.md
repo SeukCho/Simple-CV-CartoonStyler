@@ -1,19 +1,17 @@
-# Simple-CV-CartoonStyler
+# Simple-CV-Cartoonizer
 OpenCV를 활용한 간단한 카툰 필터 적용하기.
 
 [사용법]
-  > 스페이스바 : 일시정지 / 재생 토글   
-  > \> : 배속 빠르게   
-  > < : 배속 느리게   
-  > Tab : 1배속   
-  > [ : 10프레임 전으로   
-  > ] : 10프레임 후로   
-  > **r : 역재생**   
+  > 상단의 바로 필터 강도 변경   
+  > +, - 키로 동일한 기능 수행   
+  > ESC 키로 종료
 
-[기존 Video Player + Navigation](https://github.com/mint-lab/cv_tutorial/blob/master/video_player%2Bnavigation.py) 에 역재생 기능을 추가했습니다.      
 
-![1](https://user-images.githubusercontent.com/74591896/223985583-27975138-2dda-4f96-9dbe-68b6a4460e0e.png)
+![1](https://user-images.githubusercontent.com/74591896/227714300-f5768b2b-b4eb-4005-8dbd-e0310d4b0d55.png)
 
-역재생중에는 Speed가 -1로 표시되며 일시정지는 토글 할 수 있습니다.   
-0프레임에 도달하면 자동으로 역재생이 종료되고 즉시 정재생하게 됩니다.   
-역재생중에는 스피드를 변경할 수 없으며 역재생 토글 시 스피드는 1로 초기화됩니다.
+예시로 사용한 Lenna.png 에 적용한 모습
+
+ChatGPT가 제안한 코드와의 차이점(scvc.py 내 주석으로도 설명)
+1. Adaptive Thresholding 대신 수업 시간에 다뤘던 Laplacian 필터를 사용함    
+2. 카툰 필터 강도를 조절할 수 있도록(엣지는 유지하고, 이미지에 블러를 여러 세기로 적용) 트랙바와 키보드 입력 받는 기능 추가   
+이때 최대값과 최솟값(0, 2.0) 에서의 예외처리를 적용 
